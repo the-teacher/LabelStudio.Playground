@@ -1,0 +1,13 @@
+version: '3.9'
+
+name: label_studio
+
+services:
+  app:
+    tty: true
+    stdin_open: true
+    image: heartexlabs/label-studio:latest
+    volumes:
+      - ./data:/label-studio/data
+    ports:
+      - 8080:8080
